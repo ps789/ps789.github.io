@@ -9,6 +9,7 @@ venue: International Conference on Learning Representations
 status: ''
 authors: Phillip Si, Peng Chen
 paperurl: https://openreview.net/forum?id=urcEYsZOBz
+codeurl: https://github.com/ps789/latent-ensf
 order: 6
 venue_short: ICLR
 selected: true

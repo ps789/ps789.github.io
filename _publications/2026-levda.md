@@ -8,6 +8,7 @@ date: '2026-01-01'
 order: 1
 selected: true
 paperurl: https://arxiv.org/abs/2602.19406
+codeurl: https://github.com/ps789/levda
 summary: A differentiable latent ensemble-variational smoother for joint state–parameter estimation from sparse, irregular observations.
 collection: publications
 permalink: /publication/2026-levda/

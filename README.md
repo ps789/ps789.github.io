@@ -6,7 +6,7 @@ Jekyll site for [ps789.github.io](https://ps789.github.io), with research, publi
 
 - `_pages/about.html`: homepage introduction and research themes.
 - `_data/cv.yml`: education, experience, service, awards, leadership, and technical skills. Research experience is also shown on the homepage.
-- `_publications/`: one Markdown file per paper. `order` controls display order, `selected: true` adds a paper to the homepage, and `category: preprints` controls the publication filter. Keep existing permalinks when updating a paper.
+- `_publications/`: one Markdown file per paper. `order` controls display order, `selected: true` adds a paper to the homepage, `category: preprints` controls the publication filter, and `codeurl` adds a repository link to the publication listings and paper page. Keep existing permalinks when updating a paper.
 - `_data/cooking.yml` and `images/cooking/`: dish captions and local WebP photos, imported from the original Google Site. The gallery count is automatic.
 - `files/phillip-si-cv.pdf`: downloadable CV, exported from the supplied Word document. Replace this file when the CV changes.
 - `_data/navigation.yml`: main navigation.

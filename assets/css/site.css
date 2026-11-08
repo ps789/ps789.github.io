@@ -32,7 +32,6 @@ h3 { font-size: 20px; font-weight: 600; letter-spacing: -.025em; }
 .site-header { position: sticky; top: 0; z-index: 10; background: rgba(246,245,240,.97); border-bottom: 1px solid var(--line); }
 .header-inner { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .wordmark { font-family: var(--serif); font-size: 29px; font-weight: 700; letter-spacing: -.05em; text-decoration: none; color: var(--ink); white-space: nowrap; }
-.wordmark span { color: var(--green); }
 .site-nav { display: flex; align-items: center; gap: 34px; }
 .site-nav a { position: relative; padding: 10px 0; color: var(--muted); font-size: 14px; text-decoration: none; }
 .site-nav a:hover, .site-nav a[aria-current] { color: var(--green); }
@@ -82,7 +81,8 @@ h3 { font-size: 20px; font-weight: 600; letter-spacing: -.025em; }
 .publication-authors { color: var(--muted); font-size: 12px; }
 .publication-authors strong { color: var(--ink); font-weight: 600; }
 .publication-summary { color: var(--muted); font-size: 13px; margin-top: 9px; max-width: 870px; }
-.publication-entry > .text-link { position: absolute; right: 0; top: 29px; font-size: 12px; gap: 9px; }
+.publication-links { position: absolute; right: 0; top: 29px; display: flex; flex-direction: column; gap: 10px; }
+.publication-links .text-link { font-size: 12px; gap: 9px; }
 .experience-preview { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 38px; }
 .small-label { font-size: 11px; color: var(--muted); }
 .experience-preview h3 { font-size: 18px; margin: 12px 0 7px; }
@@ -180,6 +180,7 @@ h3 { font-size: 20px; font-weight: 600; letter-spacing: -.025em; }
 .paper-authors { font-size: 15px; color: var(--muted); }
 .paper-authors strong { font-weight: 600; color: var(--ink); }
 .paper-venue { color: var(--muted); font-size: 13px; margin: 10px 0 26px; }
+.paper-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .paper-abstract { border-top: 1px solid var(--line); margin-top: 45px; padding-top: 30px; }
 .paper-abstract h2 { font-size: 30px; margin-bottom: 20px; }
 .paper-abstract p { color: var(--muted); font-size: 15px; line-height: 1.95; margin-bottom: 15px; }
@@ -217,7 +218,7 @@ h3 { font-size: 20px; font-weight: 600; letter-spacing: -.025em; }
   .topic-detail { margin-top: 12px; }
   .publication-entry { padding-right: 0; }
   .publication-entry h3 { font-size: 18px; }
-  .publication-entry > .text-link { position: static; margin-top: 13px; }
+  .publication-links { position: static; flex-direction: row; flex-wrap: wrap; gap: 22px; margin-top: 13px; }
   .experience-preview article { border-top: 1px solid var(--line); padding-top: 20px; }
   .education-note { margin-top: 25px; }
   .kitchen-preview { grid-template-columns: 1fr; gap: 28px; padding: 28px; margin-bottom: 50px; }
