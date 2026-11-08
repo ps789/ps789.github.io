@@ -1,0 +1,26 @@
+---
+layout: profile
+title: CV
+permalink: /cv/
+description: Phillip Si’s education, research and industry experience, publications, service, honors, and technical skills.
+redirect_from:
+  - /resume
+  - /resume/
+---
+<header class="page-heading cv-heading">
+  <div><p class="eyebrow">Background &amp; experience</p><h1>Curriculum vitae</h1><p>Probabilistic machine learning for uncertainty-aware digital twins.</p></div>
+  <a class="button button-primary" href="{{ '/files/phillip-si-cv.pdf' | relative_url }}" download>Download CV <span class="file-label">PDF &darr;</span></a>
+</header>
+<div class="cv-layout">
+  <nav class="cv-nav" aria-label="CV sections"><a href="#education">Education</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#industry">Industry</a><a href="#service">Service</a><a href="#honors">Honors</a><a href="#leadership">Leadership</a><a href="#skills">Technical skills</a></nav>
+  <div class="cv-content">
+    <section id="education" class="cv-section"><h2>Education</h2>{% for item in site.data.cv.education %}<article class="cv-entry"><div class="entry-heading"><h3>{{ item.institution }}</h3><span>{{ item.dates }}</span></div><p class="entry-role">{{ item.degree }}</p><p class="entry-detail">{{ item.details }}</p></article>{% endfor %}</section>
+    <section id="research" class="cv-section"><h2>Research experience</h2>{% for item in site.data.cv.research %}{% include cv-position.html item=item %}{% endfor %}</section>
+    <section id="publications" class="cv-section"><h2>Selected publications</h2><p class="entry-detail">See the <a href="{{ '/publications/' | relative_url }}">publications page</a> for paper links and summaries.</p><ol class="cv-publications">{% assign papers = site.publications | sort: 'order' %}{% for paper in papers %}<li><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a><p>{{ paper.authors }}. <em>{{ paper.venue_short | default: paper.venue }}</em>, {{ paper.date | date: '%Y' }}{% if paper.distinction %} ({{ paper.distinction }}){% endif %}.</p></li>{% endfor %}</ol></section>
+    <section id="industry" class="cv-section"><h2>Industry experience</h2>{% for item in site.data.cv.industry %}{% include cv-position.html item=item %}{% endfor %}</section>
+    <section id="service" class="cv-section"><h2>Service</h2><dl class="service-list">{% for item in site.data.cv.service %}<div><dt>{{ item.venue }}</dt><dd>{{ item.details }}</dd></div>{% endfor %}</dl></section>
+    <section id="honors" class="cv-section"><h2>Honors &amp; awards</h2><ul class="simple-list">{% for item in site.data.cv.awards %}<li>{{ item }}</li>{% endfor %}</ul></section>
+    <section id="leadership" class="cv-section"><h2>Leadership</h2>{% include cv-position.html item=site.data.cv.leadership %}</section>
+    <section id="skills" class="cv-section"><h2>Technical skills</h2><dl class="skills-list">{% for item in site.data.cv.skills %}<div><dt>{{ item.category }}</dt><dd>{{ item.items }}</dd></div>{% endfor %}</dl></section>
+  </div>
+</div>

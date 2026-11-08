@@ -1,0 +1,27 @@
+---
+layout: profile
+title: Cooking
+permalink: /cooking/
+page_class: cooking-page
+description: A collection of homemade dishes by Phillip Si, from ratatouille and hand rolls to scallops and fresh pasta.
+redirect_from:
+  - /cooking.html
+---
+<header class="page-heading cooking-heading"><div><p class="eyebrow">Away from the keyboard</p><h1>From my kitchen<span class="accent">.</span></h1><p>A collection of things I’ve cooked, plated, and enjoyed.</p></div><span class="gallery-count">{{ site.data.cooking.size }} dishes<br><span>&amp; counting</span></span></header>
+<div class="cooking-gallery">
+  {% for dish in site.data.cooking %}
+  <figure class="dish">
+    <a class="dish-photo" href="{{ '/images/cooking/' | append: dish.slug | append: '.webp' | relative_url }}" data-gallery-image data-title="{{ dish.title | escape }}" data-caption="{{ dish.description | escape }}{% if dish.note %} {{ dish.note | escape }}{% endif %}" aria-label="Enlarge photo: {{ dish.title | escape }}">
+      <img src="{{ '/images/cooking/' | append: dish.slug | append: '.webp' | relative_url }}" width="{{ dish.width }}" height="{{ dish.height }}" alt="{{ dish.title | escape }} — {{ dish.description | escape }}" {% if forloop.index > 3 %}loading="lazy"{% endif %}>
+      <span class="photo-expand" aria-hidden="true">&nearr;</span>
+    </a>
+    <figcaption><span class="dish-number">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span><div><h2>{{ dish.title }}</h2><p>{{ dish.description }}</p>{% if dish.note %}<p class="dish-note">{{ dish.note }}</p>{% endif %}</div></figcaption>
+  </figure>
+  {% endfor %}
+</div>
+<p class="gallery-source">Photos and dishes from my <a href="https://sites.google.com/view/psi6/cooking">original cooking collection <span aria-hidden="true">&nearr;</span></a>.</p>
+<dialog class="photo-dialog" aria-labelledby="photo-title" aria-describedby="photo-caption">
+  <button class="dialog-close" type="button" aria-label="Close photo">&times;</button>
+  <div class="dialog-image-wrap"><img class="dialog-image" alt=""></div>
+  <div class="dialog-bottom"><div><h2 id="photo-title"></h2><p id="photo-caption"></p></div><div class="gallery-controls"><button type="button" data-gallery-prev aria-label="Previous photo">&larr;</button><span data-gallery-count aria-live="polite"></span><button type="button" data-gallery-next aria-label="Next photo">&rarr;</button></div></div>
+</dialog>

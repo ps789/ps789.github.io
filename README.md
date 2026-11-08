@@ -1,4 +1,30 @@
-# Academic Pages
+# Phillip Si’s personal website
+
+Jekyll site for [ps789.github.io](https://ps789.github.io), with research, publications, a CV, and a cooking gallery. The main pages use a custom responsive layout; the original Academic Pages templates remain available for other content.
+
+## Updating content
+
+- `_pages/about.html`: homepage introduction and research themes.
+- `_data/cv.yml`: education, experience, service, awards, leadership, and technical skills. Research experience is also shown on the homepage.
+- `_publications/`: one Markdown file per paper. `order` controls display order, `selected: true` adds a paper to the homepage, and `category: preprints` controls the publication filter. Keep existing permalinks when updating a paper.
+- `_data/cooking.yml` and `images/cooking/`: dish captions and local WebP photos, imported from the original Google Site. The gallery count is automatic.
+- `files/phillip-si-cv.pdf`: downloadable CV, exported from the supplied Word document. Replace this file when the CV changes.
+- `_data/navigation.yml`: main navigation.
+- `assets/css/site.css`, `assets/js/site.js`, and `_layouts/profile.html`: visual design and progressive enhancements. Publication filters and the photo viewer are optional; all content and photo links work without JavaScript.
+
+Build with `bundle exec jekyll build` and preview with `bundle exec jekyll serve`. With Docker, the supplied Dockerfile can provide the Ruby development dependencies:
+
+```sh
+docker build -t phillip-site .
+docker run --rm -p 4000:4000 -v "$PWD":/usr/src/app phillip-site
+```
+
+The site keeps the existing GitHub Pages configuration and requires no Node build or external image host. Main pages, publication pages, the CV PDF, and gallery assets are all generated or copied by Jekyll.
+
+---
+
+## Original template documentation
+
 **Academic Pages is a Github Pages template for academic websites.**
 
 ![Academic Pages template example](images/homepage.png "Academic Pages template example")

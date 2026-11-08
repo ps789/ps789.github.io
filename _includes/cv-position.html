@@ -1,0 +1,5 @@
+<article class="cv-entry">
+  <div class="entry-heading"><h3>{{ include.item.institution }}</h3><span>{{ include.item.dates }}</span></div>
+  <p class="entry-role">{{ include.item.role }}{% if include.item.location %} <span class="entry-location">· {{ include.item.location }}</span>{% endif %}</p>
+  <ul>{% for bullet in include.item.bullets %}<li>{{ bullet }}</li>{% endfor %}</ul>
+</article>

@@ -1,36 +1,23 @@
 ---
-layout: archive
-title: "Publications"
+layout: profile
+title: Publications
 permalink: /publications/
-author_profile: true
+description: Publications by Phillip Si on probabilistic machine learning, generative data assimilation, differentiable dynamics, and AI digital twins.
 ---
-
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
-{% include base_path %}
-
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-
-
+<header class="page-heading">
+  <p class="eyebrow">Research</p><h1>Publications</h1>
+  <p>Generative models, data assimilation, and learning the dynamics of physical systems.</p>
+  <a class="text-link" href="{{ site.author.googlescholar }}">Find me on Google Scholar <span aria-hidden="true">&nearr;</span></a>
+</header>
+<div class="publications-toolbar" data-publication-filters hidden>
+  <div class="filter-buttons" role="group" aria-label="Filter publications">
+    <button type="button" data-filter="all" aria-pressed="true">All work</button>
+    <button type="button" data-filter="reviewed" aria-pressed="false">Peer-reviewed</button>
+    <button type="button" data-filter="preprints" aria-pressed="false">Preprints</button>
+  </div>
+  <p class="result-count" role="status" aria-live="polite"></p>
+</div>
+<section class="publication-list all-publications" aria-label="Publication list">
+  {% assign papers = site.publications | sort: 'order' %}
+  {% for paper in papers %}{% include publication-entry.html paper=paper %}{% endfor %}
+</section>

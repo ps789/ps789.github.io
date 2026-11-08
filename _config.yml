@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Phillip Si"
 title_separator          : "-"
 name                     : &name "Phillip Si"
-description              : &description "Phillip's personal research page"
+description              : &description "Phillip Si is a Computer Science Ph.D. candidate at Georgia Tech working on probabilistic machine learning, generative data assimilation, and AI digital twins for physical systems."
 url                      : https://ps789.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "ps789/ps789.github.io"
@@ -119,7 +119,7 @@ atom_feed:
 
 
 # SEO Related
-google_site_verification :
+google_site_verification : "D8OzxBWtTCXIRtaY-d6zPT-81H4eBZzsutfdvbvpFkM"
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
@@ -242,7 +242,7 @@ defaults:
       path: ""
       type: publications
     values:
-      layout: single
+      layout: publication
       author_profile: true
       share: true
       comments: true

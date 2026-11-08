@@ -1,0 +1,106 @@
+education:
+  - institution: Georgia Institute of Technology
+    degree: Ph.D. in Computer Science
+    dates: Expected May 2028
+    details: "GPA: 4.00 · Advised by Peng Chen and Chao Zhang"
+  - institution: Carnegie Mellon University
+    degree: Graduate coursework in Machine Learning
+    dates: May 2023
+    details: "M.S. coursework; transitioned to the Ph.D. at Georgia Tech · QPA: 4.00"
+  - institution: Cornell University
+    degree: B.A. in Computer Science & Mathematics
+    dates: May 2022
+    details: "Magna cum laude in Computer Science · GPA: 3.91/4.00"
+
+research:
+  - institution: Oak Ridge National Laboratory
+    role: Graduate Researcher
+    dates: May 2026 – Present
+    short: Sparse-sensor estimation, latent forecasting, and control for unsteady fluid flow.
+    bullets:
+      - Developing an AI digital twin for unsteady Navier–Stokes flow that integrates sparse-sensor state and unknown-gust estimation with latent-dynamics forecasting and model predictive control, in collaboration with Guannan Zhang.
+      - Built a derivative-supervised neural surrogate and LD-EnSF assimilation–control loop; achieved 27.8× lower wake-fluctuation cost than no control and approximately 0.59 seconds per online update in simulated closed-loop tests (ongoing manuscript).
+  - institution: Argonne National Laboratory
+    role: Research Aide
+    dates: June 2025 – May 2026
+    short: Rainfall-driven neural surrogates and digital twins for basin-wide flood prediction.
+    bullets:
+      - Led development of CLDNet, a rainfall-driven latent neural ODE with terrain-conditioned, coordinate-based decoding for high-resolution flood prediction over the 4.2-million-cell Des Plaines River basin.
+      - Enabled 96-hour basin-wide forecasts approximately 115× faster than the numerical solver; validated the flood simulator against USGS measurements and integrated LD-EnSF updates from sparse stream gauges for a flood digital twin.
+  - institution: Georgia Institute of Technology
+    role: Graduate Researcher
+    dates: August 2023 – Present
+    short: Generative data assimilation and differentiable latent models for physical systems.
+    bullets:
+      - Developed Latent-EnSF, combining coupled variational autoencoders and ensemble score filtering for 225× spatially reduced observations; achieved 0.198-second assimilation steps on ERA5, versus 0.501 seconds for full-state EnSF.
+      - Helped develop LD-EnSF, combining latent dynamics and history-aware observation encoding; reduced tsunami forecast propagation time by approximately 4,000× versus the full physics solver while retaining accurate sparse-observation filtering.
+      - Developed LEVDA, a differentiable latent ensemble-variational smoother for joint state–parameter estimation from sparse, irregular observations, without physical-model adjoints or observation-to-latent encoders.
+      - Contributed to LD-EnFF, achieving 5.74%, 6.53%, and 4.42% final-state relative RMSE on Kolmogorov, tsunami, and atmospheric benchmarks, respectively.
+      - Contributed to C-STRIDE, reducing flood-depth errors approximately 40% versus gauge-history-only predictions using six gauges and terrain/rainfall inputs.
+  - institution: Cornell University
+    role: Undergraduate Researcher
+    dates: September 2020 – May 2023
+    bullets:
+      - Studied calibrated predictive uncertainty with Professor Volodymyr Kuleshov, developing probabilistic models for aleatoric and epistemic uncertainty.
+      - Developed Autoregressive Quantile Flows, using quantile-based objectives to train expressive conditional distributions without likelihood Jacobian evaluation.
+      - Extended generative flow models to semi-autoregressive energy flows trained with sample-based objectives, improving flexible distribution modeling.
+  - institution: Cornell Tech
+    role: Natural Language Processing Research Intern
+    dates: May – August 2019
+    bullets:
+      - Conducted NLP research with Professor Yoav Artzi at the Language in Context Lab.
+      - Developed a system using collaborative interactions to study second-language acquisition in a goal-specified environment with Unity and Python.
+      - Used the NewsRoom dataset to generate articles with multiple summary labels for parameter-based summary generation.
+
+industry:
+  - institution: CardioPhi
+    role: Machine Learning Research Intern
+    dates: March – August 2023
+    location: Milpitas, CA
+    bullets:
+      - Trained Transformer and ResNet models on high-frequency ECG streams for arrhythmia detection and prediction.
+      - Contributed to ECGBERT representation learning research and partnered with product teams to translate model outputs into actionable UI signals.
+  - institution: Adobe
+    role: Software Engineering Intern
+    dates: May – August 2021
+    location: San Jose, CA
+    bullets:
+      - Optimized a generative search algorithm with native C++ and lower-level speedups as part of an innovation team developing new technology.
+  - institution: Adobe
+    role: Software Engineering Intern
+    dates: May – August 2020
+    location: San Jose, CA
+    bullets:
+      - Built a Python ML routing pipeline; improved accuracy from approximately 30% to 90% on a curated validation set.
+      - Deployed the internal tool with Docker and AWS Lambda, then integrated it with a Slack bot as a slash command.
+
+service:
+  - venue: NeurIPS
+    details: "Top Reviewer (top 8%), 2026 · Reviewer, 2023 and 2025"
+  - venue: ICLR
+    details: Reviewer, 2024, 2025, and 2026
+  - venue: ICML
+    details: Reviewer, 2025 and 2026
+
+awards:
+  - Top Reviewer, NeurIPS 2026
+  - President’s Fellow, Georgia Institute of Technology
+  - Tanner Dean’s Scholar, Cornell University
+  - Dean’s List, Cornell University
+
+leadership:
+  institution: Cornell Data Science
+  role: Intelligent Systems Team Lead
+  dates: September 2019 – May 2022
+  bullets:
+    - Led a 22-member Intelligent Systems team.
+    - Combined Bayesian networks with kernel density estimators for nonparametric statistical modeling of high-dimensional data.
+    - Used reinforcement learning to develop a Pokerbot agent for strategy optimization under uncertainty.
+
+skills:
+  - category: Programming & tools
+    items: Python, Java, R, PyTorch, NumPy, SciPy, Git, Docker, Linux, AWS Lambda
+  - category: Machine learning
+    items: Generative modeling, normalizing flows, diffusion and score-based models, Bayesian inference, uncertainty quantification, reinforcement learning
+  - category: Scientific computing
+    items: Data assimilation, neural surrogates, neural ODEs, PDE simulation, differentiable optimization, model predictive control, computational fluid dynamics
