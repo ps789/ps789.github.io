@@ -3,13 +3,13 @@ layout: profile
 ---
 <article class="paper-page">
   <a class="back-link" href="{{ '/publications/' | relative_url }}">&larr; All publications</a>
-  <p class="eyebrow">{{ page.venue_short | default: page.venue }} &middot; {{ page.date | date: '%Y' }}{% if page.distinction %} &middot; {{ page.distinction }}{% endif %}</p>
+  <p class="paper-meta">{{ page.venue_short | default: page.venue }} &middot; {{ page.date | date: '%Y' }}{% if page.distinction %} &middot; {{ page.distinction }}{% endif %}</p>
   <h1>{{ page.title }}</h1>
   <p class="paper-authors">{{ page.authors | escape | replace: 'Phillip Si', '<strong>Phillip Si</strong>' }}</p>
   <p class="paper-venue">{{ page.venue }}</p>
   <div class="paper-actions">
-    <a class="button button-primary" href="{{ page.paperurl }}">Read the paper <span aria-hidden="true">&nearr;</span></a>
-    {% if page.codeurl %}<a class="button" href="{{ page.codeurl }}">View code <span aria-hidden="true">&nearr;</span></a>{% endif %}
+    <a href="{{ page.paperurl }}">Read the paper</a>
+    {% if page.codeurl %}<a href="{{ page.codeurl }}">View code</a>{% endif %}
   </div>
   <div class="paper-abstract">
     <h2>{% if page.abstract %}Abstract{% else %}Overview{% endif %}</h2>

@@ -9,37 +9,26 @@ redirect_from:
 ---
 <section class="hero" aria-labelledby="intro-title">
   <div class="hero-copy">
-    <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Computer Science Ph.D. candidate · Georgia Tech</p>
     <h1 id="intro-title">Phillip Si</h1>
-    <p class="hero-lead">Learning from uncertainty.<br>Modeling the physical world.</p>
-    <p class="hero-description">I work on probabilistic machine learning, generative data assimilation, and differentiable surrogate models. My research brings sparse observations and dynamical models together to build efficient, uncertainty-aware digital twins.</p>
-    <p class="hero-description">At Georgia Tech, I’m advised by <a href="https://faculty.cc.gatech.edu/~pchen402/">Peng Chen</a> and <a href="https://chaozhang.org/">Chao Zhang</a>. I also conduct research at Oak Ridge National Laboratory, following work at Argonne National Laboratory.</p>
-    <div class="hero-actions"><a class="button button-primary" href="{{ '/publications/' | relative_url }}">Explore my research <span aria-hidden="true">&rarr;</span></a><a class="text-link" href="mailto:psi6@gatech.edu">Get in touch <span aria-hidden="true">&nearr;</span></a></div>
-    <div class="profile-links"><a href="{{ site.author.googlescholar }}">Google Scholar <span aria-hidden="true">&nearr;</span></a><a href="https://github.com/{{ site.author.github }}">GitHub <span aria-hidden="true">&nearr;</span></a><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn <span aria-hidden="true">&nearr;</span></a></div>
+    <p>I’m a Ph.D. candidate in Computer Science at Georgia Tech, advised by <a href="https://faculty.cc.gatech.edu/~pchen402/">Peng Chen</a> and <a href="https://chaozhang.org/">Chao Zhang</a>. I work on probabilistic machine learning and data assimilation for physical systems.</p>
+    <p>I’m also a graduate researcher at Oak Ridge National Laboratory, working on estimation and control for fluid flows. Previously, I worked on flood forecasting at Argonne National Laboratory.</p>
+    <p>Before Georgia Tech, I studied machine learning at Carnegie Mellon and Computer Science and Mathematics at Cornell, where I worked with Volodymyr Kuleshov.</p>
+    <div class="profile-links"><a href="mailto:psi6@gatech.edu">Get in touch</a><a href="{{ site.author.googlescholar }}">Google Scholar</a><a href="https://github.com/{{ site.author.github }}">GitHub</a><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a><a href="{{ '/cv/' | relative_url }}">CV</a></div>
   </div>
   <figure class="portrait">
     <div class="portrait-frame"><img src="{{ '/images/profile.webp' | relative_url }}" width="800" height="450" alt="Two researchers collaborating at a whiteboard" fetchpriority="high"></div>
-    <figcaption><span>At the whiteboard</span><span>Based in Atlanta, Georgia</span></figcaption>
   </figure>
 </section>
 <section class="section research-section" aria-labelledby="research-title">
-  <div class="section-heading"><div><p class="eyebrow">What I work on</p><h2 id="research-title">Making sense of complex systems.</h2></div><p>From a few measurements to a fuller picture of how the world evolves.</p></div>
-  <div class="research-topics">
-    <article><span class="topic-number">01</span><h3>Generative data assimilation</h3><p>Combining score-based generative models and Bayesian filtering to infer high-dimensional states from sparse, noisy observations.</p><span class="topic-detail">Latent-EnSF · LD-EnSF · LD-EnFF</span></article>
-    <article><span class="topic-number">02</span><h3>Differentiable dynamics</h3><p>Learning compact surrogate models for efficient forecasting, joint state–parameter estimation, and model predictive control.</p><span class="topic-detail">LEVDA · Neural ODEs · Flow control</span></article>
-    <article><span class="topic-number">03</span><h3>AI digital twins</h3><p>Bringing simulation, observations, and learning together for flood prediction, weather, and unsteady fluid dynamics.</p><span class="topic-detail">CLDNet · C-STRIDE · Flood forecasting</span></article>
-  </div>
+  <h2 id="research-title">Research</h2>
+  <p>I’m interested in estimating the state of a physical system when only a small part of it can be observed. I develop methods that combine generative models with learned dynamics to make forecasting and data assimilation faster.</p>
+  <p>Recent projects include <a href="{{ '/publication/2026-levda/' | relative_url }}">LEVDA</a> for joint state and parameter estimation, <a href="{{ '/publication/2024-ld-ensf/' | relative_url }}">LD-EnSF</a> for filtering with sparse observations, and <a href="{{ '/publication/2026-flood-digital-twins/' | relative_url }}">CLDNet</a> for high-resolution flood prediction.</p>
 </section>
 <section class="section" aria-labelledby="selected-title">
-  <div class="section-heading"><div><p class="eyebrow">Selected work</p><h2 id="selected-title">Recent publications</h2></div><a class="text-link" href="{{ '/publications/' | relative_url }}">All publications <span aria-hidden="true">&rarr;</span></a></div>
+  <div class="section-heading"><h2 id="selected-title">Selected publications</h2><a href="{{ '/publications/' | relative_url }}">All publications</a></div>
   <div class="publication-list">{% assign papers = site.publications | sort: 'order' %}{% for paper in papers %}{% if paper.selected %}{% include publication-entry.html paper=paper %}{% endif %}{% endfor %}</div>
 </section>
-<section class="section" aria-labelledby="experience-title">
-  <div class="section-heading"><div><p class="eyebrow">Along the way</p><h2 id="experience-title">Research experience</h2></div><a class="text-link" href="{{ '/cv/' | relative_url }}">View my CV <span aria-hidden="true">&rarr;</span></a></div>
-  <div class="experience-preview">{% for position in site.data.cv.research limit:3 %}<article><p class="small-label">{{ position.dates }}</p><h3>{{ position.institution }}</h3><p class="experience-role">{{ position.role }}</p><p>{{ position.short }}</p></article>{% endfor %}</div>
-  <p class="education-note">Previously: machine learning graduate coursework at <strong>Carnegie Mellon</strong>, and a B.A. in Computer Science &amp; Mathematics at <strong>Cornell</strong>, where I worked with Volodymyr Kuleshov.</p>
-</section>
 <section class="kitchen-preview" aria-labelledby="kitchen-title">
-  <div><p class="eyebrow">Beyond research</p><h2 id="kitchen-title">Another kind<br>of experiment.</h2><p>Away from research, I enjoy cooking and gaming. Here are a few things I’ve made in the kitchen.</p><a class="text-link" href="{{ '/cooking/' | relative_url }}">Visit the kitchen <span aria-hidden="true">&rarr;</span></a></div>
-  <a class="kitchen-photo" href="{{ '/cooking/' | relative_url }}" aria-label="Explore my cooking gallery"><img src="{{ '/images/cooking/pistachio-crusted-lamb.webp' | relative_url }}" width="1280" height="960" alt="Homemade pistachio and herb-crusted lamb with sweet potato purée" loading="lazy"><span>Pistachio &amp; herb-crusted lamb <span aria-hidden="true">&nearr;</span></span></a>
+  <div><h2 id="kitchen-title">Outside research</h2><p>I enjoy cooking and gaming. I’ve put some photos of things I’ve made on the <a href="{{ '/cooking/' | relative_url }}">cooking page</a>.</p></div>
+  <a class="kitchen-photo" href="{{ '/cooking/' | relative_url }}" aria-label="Cooking photos"><img src="{{ '/images/cooking/pistachio-crusted-lamb.webp' | relative_url }}" width="1280" height="960" alt="Pistachio and herb-crusted lamb with sweet potato purée" loading="lazy"></a>
 </section>
